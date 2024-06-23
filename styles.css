@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #333;
+    position: relative;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: white;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #dff1e0;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: rgba(51, 51, 51, 0.9);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.presentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 8rem 2rem;
+    max-width: 1200px;
+    margin: 5rem auto; /* Centrando el contenido */
+}
+
+.presentation-content {
+    flex: 1;
+    padding: 2rem;
+    margin-right: 2rem;
+}
+
+.presentation h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #bc8a5f;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #bc8a5f;
+    padding-bottom: 10px;
+}
+
+.presentation p {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+.presentation-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentation-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Animación de la hamburguesa */
+.burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+    opacity: 0;
+}
+
+.burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        max-height: none;
+    }
+}
