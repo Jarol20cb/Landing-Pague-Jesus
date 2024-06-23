@@ -1,9 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        burger.classList.toggle('toggle');
-    });
+document.getElementById('navbar-toggle').addEventListener('click', function() {
+    var navbarLinks = document.getElementById('navbar-links');
+    navbarLinks.classList.toggle('active');
 });
