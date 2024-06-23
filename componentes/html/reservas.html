@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Dolce Mariamm</title>
+    <link rel="stylesheet" href="../css/reservas.css">
+    <link rel="stylesheet" href="componentes/css/nav.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <strong><div class="logo">Dolce Mariamm</div></strong>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="tipos-de-eventos.html">Tipos de eventos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="informacion.html">Información</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="reservas">
+            <div class="container">
+                <h2>Reservas</h2>
+                <form action="reservar.php" method="post" class="reserva-form">
+                    <div class="form-group">
+                        <label for="fecha">Fecha del evento:</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Hora del evento:</label>
+                        <input type="time" id="hora" name="hora" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="disponibilidad">Consultar disponibilidad:</label>
+                        <textarea id="disponibilidad" name="disponibilidad" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Reservar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="../../script.js"></script>
+</body>
+</html>
