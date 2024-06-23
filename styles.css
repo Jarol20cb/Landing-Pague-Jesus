@@ -6,30 +6,17 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: url('assets/fondo.png') no-repeat center center; /* Imagen de fondo centrada */
-    background-size: cover; /* Ajusta el tamaño de la imagen de fondo para cubrir horizontalmente */
-    color: #fff; /* Texto blanco */
-    position: relative;
-    min-height: 100vh; /* Asegura que el cuerpo cubra toda la altura de la ventana */
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro superpuesto */
-    z-index: -1;
+    color: #333;
+    min-height: 100vh;
+    background-color: #f9f9f9;
 }
 
 header {
-    background-color: rgba(51, 51, 51, 0.9); /* Fondo gris oscuro con transparencia */
+    background-color: rgba(51, 51, 51, 0.9);
     color: white;
     padding: 1rem 2rem;
     position: relative;
-    z-index: 1; /* Asegura que el header esté por encima del fondo oscuro */
+    z-index: 1;
 }
 
 nav {
@@ -53,12 +40,12 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: white; /* Texto blanco */
+    color: white;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #dff1e0; /* Texto hover verde claro */
+    color: #dff1e0;
 }
 
 .burger {
@@ -82,13 +69,13 @@ nav {
         top: 60px;
         left: 0;
         right: 0;
-        background-color: rgba(51, 51, 51, 0.9); /* Fondo gris oscuro con transparencia */
+        background-color: rgba(51, 51, 51, 0.9);
         max-height: 0;
         transition: max-height 0.5s ease-in-out;
     }
 
     .nav-links.active {
-        max-height: 300px; /* Ajusta este valor según la cantidad de elementos */
+        max-height: 300px;
     }
 
     .burger {
@@ -97,33 +84,122 @@ nav {
 }
 
 .presentation {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: calc(100vh - 60px); /* Ajusta la altura para ocupar toda la pantalla menos la altura del header */
-    margin: auto;
-    position: relative;
-    z-index: 1; /* Asegura que el contenido de la presentación esté por encima del fondo oscuro */
-    flex-direction: column; /* Asegura que el h1 esté arriba y el p abajo */
+    height: 100vh;
+    background: url('assets/fondo.png') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
 }
 
 .presentation-content {
-    max-width: 600px; /* Ajusta el ancho máximo del contenido */
+    z-index: 2;
+    max-width: 600px;
 }
 
 .presentation h1 {
-    font-family: 'Dancing Script', cursive; /* Similar a la fuente de la tarjeta */
-    font-size: 3.5rem; /* Aumenta el tamaño de la letra */
-    font-weight: bold; /* Hace la letra más gruesa */
-    color: #fff; /* Texto blanco */
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #fff;
     margin-bottom: 1rem;
 }
 
 .presentation p {
-    font-size: 1.5rem; /* Aumenta el tamaño de la letra */
-    color: #fff; /* Texto blanco */
+    font-size: 1.5rem;
+    color: #fff;
     margin: 0;
+}
+
+.container {
+    padding: 4rem 2rem; /* Espaciado adicional entre secciones */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem; /* Espaciado adicional debajo del título */
+    color: #333;
+}
+
+.container p, .container ul {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container ul li {
+    margin: 0.5rem 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 1rem;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    flex: 0 1 45%;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #333;
 }
 
 /* Animación de la hamburguesa */
@@ -141,9 +217,17 @@ nav {
 
 @media (min-width: 769px) {
     .nav-links {
-        display: flex !important; /* Asegura que los enlaces de navegación se muestren en pantallas más grandes */
+        display: flex !important;
         flex-direction: row;
         position: static;
         max-height: none;
+    }
+
+    .column {
+        flex: 0 0 48%; /* Ajusta el ancho de las columnas en pantallas grandes */
+    }
+
+    .product-card {
+        flex: 0 1 22%; /* Ajusta el ancho de las tarjetas de productos en pantallas grandes */
     }
 }
