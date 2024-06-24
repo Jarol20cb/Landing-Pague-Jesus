@@ -1,3 +1,4 @@
+/* Estilos existentes */
 * {
     margin: 0;
     padding: 0;
@@ -65,7 +66,8 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 250px; /* Adjust width to make them uniform */
+    width: 100%; /* Adjust width to make them uniform */
+    max-width: 250px;
 }
 
 .event-item img {
@@ -95,4 +97,73 @@ h2 {
 
 .event-item:hover img {
     transform: scale(1.1);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .container {
+        padding: 3rem 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .event-item h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .event-item h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    .tipos-de-eventos {
+        padding: 2rem 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .event-item h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 1rem;
+    }
+
+    .tipos-de-eventos {
+        padding: 1rem 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-item h3 {
+        font-size: 1rem;
+    }
 }

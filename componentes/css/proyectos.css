@@ -1,3 +1,4 @@
+/* Estilos existentes */
 * {
     margin: 0;
     padding: 0;
@@ -82,4 +83,78 @@ h2 {
 h3 {
     margin-top: 1rem;
     font-size: 1.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .container {
+        padding: 3rem 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-item {
+        flex: 0 1 48%;
+    }
+}
+
+@media (max-width: 992px) {
+    .project-item {
+        flex: 0 1 100%;
+        margin: 1rem 0;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    .proyectos {
+        padding: 2rem 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 1rem;
+    }
+
+    .proyectos {
+        padding: 1rem 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .project-item {
+        padding: 1rem;
+    }
 }

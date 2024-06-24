@@ -1,3 +1,4 @@
+/* Estilos existentes */
 * {
     margin: 0;
     padding: 0;
@@ -90,4 +91,91 @@ h3 {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .container {
+        padding: 3rem 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    .product-card {
+        flex: 0 1 48%;
+    }
+
+    .custom-order {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .product-card {
+        flex: 0 1 100%;
+        margin: 1rem 0;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .custom-order {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    .productos {
+        padding: 2rem 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .custom-order {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 1rem;
+    }
+
+    .productos {
+        padding: 1rem 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .custom-order {
+        padding: 1rem;
+    }
 }

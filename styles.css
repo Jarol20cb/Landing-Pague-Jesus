@@ -1,3 +1,4 @@
+/* Estilos existentes */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +11,6 @@ body {
     min-height: 100vh;
     background-color: #f9f9f9;
 }
-
 
 .presentation {
     position: relative;
@@ -54,7 +54,7 @@ body {
 }
 
 .container {
-    padding: 4rem 2rem; /* Espaciado adicional entre secciones */
+    padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -62,7 +62,7 @@ body {
 
 .container h2 {
     font-size: 2.5rem;
-    margin-bottom: 2rem; /* Espaciado adicional debajo del título */
+    margin-bottom: 2rem;
     color: #333;
 }
 
@@ -131,3 +131,82 @@ body {
     color: #333;
 }
 
+/* Media Queries */
+@media (max-width: 1200px) {
+    .container {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .presentation h1 {
+        font-size: 3rem;
+    }
+
+    .presentation p {
+        font-size: 1.2rem;
+    }
+
+    .container h2 {
+        font-size: 2rem;
+    }
+
+    .container p, .container ul {
+        font-size: 1rem;
+    }
+
+    .product-card {
+        flex: 0 1 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .presentation {
+        height: 80vh;
+    }
+
+    .presentation h1 {
+        font-size: 2.5rem;
+    }
+
+    .presentation p {
+        font-size: 1rem;
+    }
+
+    .container h2 {
+        font-size: 1.75rem;
+    }
+
+    .product-card {
+        flex: 0 1 100%;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .presentation h1 {
+        font-size: 2rem;
+    }
+
+    .presentation p {
+        font-size: 0.9rem;
+    }
+
+    .container h2 {
+        font-size: 1.5rem;
+    }
+
+    .container p, .container ul {
+        font-size: 0.9rem;
+    }
+}
